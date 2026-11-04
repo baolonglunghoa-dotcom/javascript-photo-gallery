@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Chủ - My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="addTabFocus()">
+  <!-- Yêu cầu 3: Skip link -->
+  <a href="#main-content" class="skip-link">Chuyển đến Nội dung chính</a>
+
+  <header>
+    <!-- Yêu cầu 4 & 7: Navigation flexbox -->
+    <nav class="navbar" aria-label="Menu chính">
+      <h2>MyWebsite</h2>
+      <ul class="nav-links">
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="gallery.html">Bộ Sưu Tập</a></li>
+        <li><a href="about.html">Giới Thiệu</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Yêu cầu 3: Vùng main content nhận focus -->
+  <main id="main-content" tabindex="-1">
+    <div id="image">
+    Di chuột qua một hình ảnh bên dưới để hiển thị ở đây.
+    </div>
+    <div class="gallery-container">
+    <img class="preview" alt="Dòng sông uốn lượn qua các dãy núi" src="https://picsum.photos/id/1015/600/400" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+    <img class="preview" alt="Hẻm núi lúc bình minh rực rỡ" src="https://picsum.photos/id/1016/600/400" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+    <img class="preview" alt="Rừng thông mờ sương" src="https://picsum.photos/id/1018/600/400" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+    <img class="preview" alt="Hồ nước phẳng lặng soi bóng mây" src="https://picsum.photos/id/1025/600/400" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+    <img class="preview" alt="Bầu trời chiều tà ráng đỏ" src="https://picsum.photos/id/1035/600/400" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+    <img class="preview" alt="Thác nước chảy xiết giữa rừng cây" src="https://picsum.photos/id/1040/600/400" onmouseover="upDate(this)" onmouseleave="unDo()" onfocus="upDate(this)" onblur="unDo()">
+</div>
+    <h1>Chào mừng đến với trang web của tôi</h1>
+    <p>Khám phá các bức ảnh phong cảnh tuyệt đẹp được chụp trong năm qua.</p>
+
+    <!-- Yêu cầu 6: Bố cục Grid ít nhất 2 cột -->
+    <div class="grid-container">
+      <article class="card">
+        <!-- Yêu cầu 1 & 5: Hình ảnh có thẻ alt hợp lệ cho accessibility -->
+        <img src="https://picsum.photos/id/1015/600/400" alt="Dòng sông uốn lượn qua các dãy núi hùng vĩ" onmouseover="upDate(this)" onmouseout="unDo()">
+        <h2>Núi rừng hùng vĩ</h2>
+        <p>Vẻ đẹp thiên nhiên hoang sơ và không khí trong lành.</p>
+      </article>
+
+      <article class="card">
+        <img src="https://picsum.photos/id/1016/600/400" alt="Hẻm núi đá sâu phủ đầy ánh nắng mặt trời" onmouseover="upDate(this)" onmouseout="unDo()">
+        <h2>Hẻm núi bình minh</h2>
+        <p>Những vách đá sừng sững dưới nắng sớm rực rỡ.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 My Portfolio. Thiết kế phục vụ bài tập khóa học.</p>
+  </footer>
+  <script src="gallery.js"></script>
+</body>
+</html>
